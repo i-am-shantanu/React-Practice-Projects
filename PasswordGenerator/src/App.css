@@ -7,7 +7,37 @@
 }
 
 .container{
-  background-color: black;
+  background-color:#27272a;
+  padding: 50px;
   width: 40vw;
+  height: 25vh;
+  position: fixed;
+  top: 30vh;
+  left: 30vw;
+  border-radius: 10px;
+  outline: solid#fbbf24 2px;
+
   
+}
+.box1{
+  margin-bottom: 50px;
+  color: whitesmoke;
+  font-size: large;
+}
+.label{
+  font-size: large;
+  color: whitesmoke;
+  margin-left: 5px;
+}
+.inputfield{
+  width: 500px;
+  height: 25px;
+  border-radius: 50px;
+  text-align: center;
+  font-size: larger;
+}
+.box2{display: flex;
+  width: 500px;
+  justify-content: space-between;
+  margin-bottom: 30px;
 }
