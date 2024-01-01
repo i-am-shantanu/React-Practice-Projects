@@ -1,0 +1,13 @@
+.titlebar{
+  font-size: 35pt;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+}
+
+.container{
+  background-color: black;
+  width: 40vw;
+  
+}

@@ -1,0 +1,11 @@
+body{
+  padding: 0px;
+  margin: 0px;
+}
+#root{
+  padding: 0px;
+  margin: 0px;
+  height: 100vh;
+  background-color: grey;
+
+}
