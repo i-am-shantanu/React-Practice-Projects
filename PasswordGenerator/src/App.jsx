@@ -1,4 +1,4 @@
-import { useState,useEffect } from 'react'
+import { useState,useEffect,useRef } from 'react'
 import './App.css'
 
 function App() {
@@ -6,6 +6,7 @@ function App() {
   const [numberAllowed,setNumberAllowed]=useState(false)
   let [specialCharactersAllowed,setSpecialCharactersAllowed]=useState(false)
   const [password,setPassword]=useState("")
+  const passwordRef=useRef(null)
 
   function generatePassword(){
 
@@ -28,6 +29,11 @@ function App() {
     setPassword(curPassword);
   }
 
+  function handleClick(){
+    passwordRef.current?.select();
+    window.navigator.clipboard.writeText(password);
+  }
+
   useEffect(generatePassword,[length,numberAllowed,specialCharactersAllowed])
   
 
@@ -38,7 +44,8 @@ function App() {
     </div>
     <div className='container'>
         <div className='box1'>
-        <input type="text" placeholder='Password' className='inputfield' value={password} readOnly={true}/>
+        <input type="text" placeholder='Password' className='inputfield' value={password} readOnly={true} ref={passwordRef}/>
+        <button className='copy' onClick={handleClick}>Copy</button>
         </div>
         <div className='box2'>
            <div><input type='range' min={8} max={100} defaultValue={length} onChange={(e)=>{setLength(e.target.value)}}/></div>
