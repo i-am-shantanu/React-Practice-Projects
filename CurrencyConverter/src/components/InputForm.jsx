@@ -16,7 +16,7 @@ function InputForm({
         <>
         <div className='container'>
             <div className='utility'>
-                <label>{label}</label>
+                <label>{label} : {currency}</label>
                 <label>Currency</label>
             </div>
             <div className='utility'>
