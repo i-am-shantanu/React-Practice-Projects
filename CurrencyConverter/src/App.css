@@ -1,0 +1,10 @@
+.box{
+    position: fixed;
+    top: 30vh;
+    width: 100vw;
+    height:250px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
