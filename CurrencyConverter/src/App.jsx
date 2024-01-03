@@ -7,7 +7,7 @@ const [inputCurrency,setInputCurrency]=useState("usd")
 const [targetCurrency,setTargetCurrency]=useState("inr")
 const [result,setResult]=useState(0)
 const [options,setOptions]=useState([])
-const [flag,setFlag]=useState(true)
+const [obj,setObj]=useState({})
 function extractInput(e){
   e.preventDefault();
   setInputValue(Number(e.target.value));
@@ -18,10 +18,16 @@ useEffect(()=>{
   fetch(`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${inputCurrency}.json`)
   .then((res)=>res.json())
   .then((res)=>{
+    setObj(res)
     setOptions(Object.keys(res[inputCurrency]))
-    setResult(res[inputCurrency][targetCurrency] * inputValue)
+    console.log("Fetch Api invoked !")
+    
   })
-},[flag])
+},[inputCurrency])
+
+function handleClick(){
+  setResult(obj[inputCurrency][targetCurrency] * inputValue)
+}
 
 
   return (
@@ -29,7 +35,7 @@ useEffect(()=>{
       <div className='box'>
       <InputForm  label={"from"} inputValue={inputValue} handleInput={extractInput} currency={inputCurrency} handleCurrency={setInputCurrency} readonly={false} options={options}/> 
       <InputForm label={"to"} inputValue={result} currency={targetCurrency} handleCurrency={setTargetCurrency} readonly={true} options={options} />
-      <button onClick={()=>{setFlag((prev)=>!prev)}}>convert from {inputCurrency} to {targetCurrency}</button>
+      <button onClick={handleClick}>convert from {inputCurrency} to {targetCurrency}</button>
       </div>
     </>
     )
