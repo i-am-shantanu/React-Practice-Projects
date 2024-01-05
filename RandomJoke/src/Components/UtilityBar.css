@@ -1,0 +1,21 @@
+.utilitybox{
+
+    padding: 20px;
+    width: 40vw;
+    
+    height: 40px;
+    border-radius: 50px;
+    background-color: #fdba74;
+    display: flex;
+    justify-content: space-evenly;
+    border: 2px solid black;
+}
+
+.utilitybox button{
+
+    background-color: #f97316;
+    font-size: larger;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 50px;
+}
