@@ -1,0 +1,21 @@
+.taskBox{
+  padding: 15px;
+  width: 30vw;
+  background-color: aqua;
+  height: 50px;
+  font-size: 25pt;
+  font-weight: bolder;
+  font-family: monospace;
+  margin: 15px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.taskBox img{
+  height: 25px;
+}
+.addTaskBox{
+  margin-bottom: 50px;
+}
