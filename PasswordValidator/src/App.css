@@ -1,0 +1,32 @@
+.Heading h1{
+
+    font-size: 50pt;
+    text-align: center;
+}
+
+.container input{
+ height: 30px;
+ width: 20vw;   
+ border-radius: 50px;
+ border: 2px solid black;
+ font-size: larger;
+ text-align: center;
+}
+.container{
+    position: fixed;
+    left: 30vw;
+    font-size: 15pt;
+    font-weight: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.container label{
+    margin-right: 10px;
+}
+
+.container .message{
+    margin-top: 15px;
+}
