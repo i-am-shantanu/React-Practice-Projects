@@ -3,6 +3,7 @@ import './Title.css'
 function Title({
     handleclick,
     handleNext,
+    disable
     
 }){
 
@@ -13,9 +14,9 @@ function Title({
             <h1>Welcome to Rock, Paper and Scissors Game</h1>
         </div>
         <div className='Buttons'>
-            <button onClick={(e)=>{handleclick(e);}} >Rock</button>
-            <button onClick={(e)=>{handleclick(e);}} >Paper</button>
-            <button onClick={(e)=>{handleclick(e);}} >Scissors</button>
+            <button onClick={(e)=>{handleclick(e);}} disabled={disable} >Rock</button>
+            <button onClick={(e)=>{handleclick(e);}}  disabled={disable}>Paper</button>
+            <button onClick={(e)=>{handleclick(e);}}  disabled={disable}>Scissors</button>
             <button className='yellow' style={{backgroundColor:'orange'}} onClick={handleNext}>Next</button>
         </div>
         </div>

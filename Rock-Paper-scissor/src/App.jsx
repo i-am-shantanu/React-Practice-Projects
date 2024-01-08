@@ -12,7 +12,7 @@ function App() {
   const[compScore,setCompScore]=useState(0)
   const[draw,setDraw]=useState(0)
 
-  
+  const[disable,setdisable]=useState("")
 
   let compOption=["Rock","Paper","Scissors"]
 
@@ -39,6 +39,7 @@ function App() {
   }
   function handleNext(){
     setUserChoice("");
+    setdisable("")
  
   }
 
@@ -64,13 +65,20 @@ function App() {
 
   }
 
+  useEffect(()=>{
+    if(userChoice==="")
+    return
+    else
+    setdisable("true");
+
+  },[userScore,compScore,draw])
 
   useEffect(()=>{calcScore()},[compChoice])
   useEffect(()=>{generateCompChoice()},[userChoice])
   return (
   <>
     <div className='Titlebar'>
-      <Title  handleclick={handleclick} handleNext={handleNext} />
+      <Title  handleclick={handleclick} handleNext={handleNext} disable={disable}/>
     </div>
     <div className='choices'>
       <Choices usersChoice={userChoice} compChoice={compChoice} />
