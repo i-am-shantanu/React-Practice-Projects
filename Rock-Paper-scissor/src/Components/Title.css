@@ -1,0 +1,29 @@
+.title-container{
+    height: 30vh;
+    font-size: 20pt;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: greenyellow;
+    
+}
+
+.Buttons{
+
+    width: 50vw;
+ 
+    display: flex;
+    justify-content: space-around;
+}
+.Buttons button{
+
+    width: 150px;
+    height: 60px;
+    background-color: green;
+    color: whitesmoke;
+    font-size: 20pt;
+    border-radius: 50px;
+    
+}
+

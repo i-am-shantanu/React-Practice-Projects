@@ -1,0 +1,7 @@
+.scores-container{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20pt;
+    color: white;
+}
