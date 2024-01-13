@@ -1,0 +1,11 @@
+.login{
+  position: fixed;
+  left: 35vw;
+  top: 35vh;
+}
+.message{
+  margin-top: 50px;
+
+  text-align: center;
+
+}
