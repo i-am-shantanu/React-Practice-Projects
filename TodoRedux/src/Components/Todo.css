@@ -1,0 +1,16 @@
+.todo-container{
+    width: 30vw;
+    padding: 15px;
+    background-color:#0d9488;
+    border-radius: 50px;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18pt;
+}
+.todo-container button{
+    border: 50px;
+    background-color:sandybrown;
+    border-radius: 50px;
+    font-weight: bold;
+}
