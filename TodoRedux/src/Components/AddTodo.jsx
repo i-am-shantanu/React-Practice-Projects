@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {useDispatch} from 'react-redux'
 import './AddTodo.css'
 import {addTodo} from '../Features/Todo/TodoSlice'
@@ -14,6 +14,7 @@ function AddTodo(){
         dispatch(addTodo(value))
         setValue("");
     }
+
     return(
         <>
         <div className="add-todo-container" onSubmit={(e)=>{handleSubmit(e)}}>

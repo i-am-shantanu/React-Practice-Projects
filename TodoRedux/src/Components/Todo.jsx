@@ -1,6 +1,7 @@
 import './Todo.css'
+import { useEffect } from 'react';
 import {useDispatch, useSelector } from 'react-redux';
-import { removeTodo } from '../Features/Todo/TodoSlice';
+import { removeTodo,restoreData } from '../Features/Todo/TodoSlice';
 
 function Todo()
 {
@@ -10,6 +11,15 @@ function Todo()
     function handleclick(e){    
         dispatch(removeTodo({id:e.target.parentElement.id}));
     }
+    useEffect(()=>{
+        window.localStorage.setItem("todos",JSON.stringify(todolist));
+        console.log("data stored successfully !!")
+    },[todolist])
+    // useEffect(()=>{
+    //     const prevData= JSON.parse(window.localStorage.getItem("todos"))
+    //     console.log(prevData);
+    //     dispatch(restoreData(prevData));
+    // },[])
     return(
         <>
         {
