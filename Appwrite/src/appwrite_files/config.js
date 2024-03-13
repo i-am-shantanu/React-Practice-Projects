@@ -1,5 +1,5 @@
 import conf from '../conf/conf.js'
-import { Client, Databases,Storage,Query } from "appwrite";
+import { Client, Databases,Storage,Query,ID } from "appwrite";
 
 
 
@@ -97,4 +97,58 @@ export class Service{
 
         }
     }
+
+    //storage
+
+    async uploadFile(file){
+
+        try {
+
+            return await this.buckets.createFile(
+                conf.appWriteBucketId,
+                ID.unique(),
+                file
+            )
+            
+        } catch (error) {
+            
+            console.log("Appwrite Services :: uploadFile() ::" , error);
+            return false;
+            
+        }
+    }
+
+    async deleteFile(fileID){
+
+        try {
+
+            return await this.buckets.deleteFile(
+                conf.appWriteBucketId,
+                fileID
+            )
+            
+        } catch (error) {
+            
+            console.log("Appwrite Services :: delteFile() ::" , error);
+            return false;
+            
+        }
+    }
+
+    getFilePreview (fileID){
+
+        try {
+
+            return this.buckets.getFilePreview(conf.appWriteBucketId,fileID).href;
+            
+        } catch (error) {
+            
+            console.log("Appwrite Services :: getFilePreview() ::" , error);
+            return false;
+        }
+    }
 }
+
+const service= new Service();
+
+export default service;
