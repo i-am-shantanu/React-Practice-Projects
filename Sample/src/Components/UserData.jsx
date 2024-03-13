@@ -18,5 +18,5 @@ export const UserDataLoader=async function(){
 
     let dataObj=await data.json()
 
-    return dataObj;
+    
 }
