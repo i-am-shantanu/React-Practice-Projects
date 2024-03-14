@@ -8,7 +8,7 @@ function Protected({children,authentication = true}) {
 
     const navigate = useNavigate();
 
-    [Loader,setLoader]=useState(true);
+    const [Loader,setLoader]=useState(true);
 
     useEffect(()=>{
 
@@ -21,7 +21,7 @@ function Protected({children,authentication = true}) {
 
     },[navigate,authStatus,authentication])
 
-  return loader?null:<>{children}</>
+  return Loader?null:<>{children}</>
 }
 
 export default Protected
