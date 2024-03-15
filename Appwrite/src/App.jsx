@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
-
+import Footer from './Components/Footer/Footer.jsx'
 
 function App() {
 
@@ -10,6 +10,9 @@ function App() {
     <main>
       <Outlet/>
     </main>
+    <footer>
+      <Footer/>
+    </footer>
     </>
   )
 }
